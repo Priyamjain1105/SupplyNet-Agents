@@ -11,5 +11,5 @@ npx @modelcontextprotocol/inspector
 
 
  hello guis
- 
- 
+
+ hehe

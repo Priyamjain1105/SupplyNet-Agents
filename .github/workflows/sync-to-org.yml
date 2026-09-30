@@ -1,0 +1,23 @@
+name: Sync Repo to Organization
+
+on:
+  push:
+    branches:
+      - main  # Change to 'master' if your default branch uses master
+
+jobs:
+  sync-to-org:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetches full commit history for a clean push
+
+      - name: Push to Organization Repository
+        run: |
+          # Configure remote with your access token
+          git remote add org https://x-access-token:${{ secrets.ORG_SYNC_TOKEN }}@github.com/SupplyNet/SupplyNet-Agents.git
+          
+          # Force push to mirror the branch, or standard push
+          git push org HEAD:main --force
