@@ -15,9 +15,8 @@ jobs:
           fetch-depth: 0  # Fetches full commit history for a clean push
 
       - name: Push to Organization Repository
+        env:
+          ORG_TOKEN: ${{ secrets.ORG_SYNC_TOKEN }}
         run: |
-          # Configure remote with your access token
-          git remote add org https://x-access-token:${{ secrets.ORG_SYNC_TOKEN }}@github.com/SupplyNet/SupplyNet-Agents.git
-          
-          # Force push to mirror the branch, or standard push
-          git push org HEAD:main --force
+          git remote add org https://github.com/SupplyNet/SupplyNet-Agents.git
+          git -c http.extraheader="AUTHORIZATION: bearer $ORG_TOKEN" push org HEAD:main --force
