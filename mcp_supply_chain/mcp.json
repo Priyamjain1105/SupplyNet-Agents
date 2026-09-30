@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "news": {
+      "command": "C:\\Users\\priya\\Downloads\\Supply-Chain-Management\\menv\\Scripts\\python.exe",
+      "args": [
+        "C:\\Users\\priya\\Downloads\\Supply-Chain-Management\\mcp_supply_chain\\servers\\news_server.py",
+        "--stdio"
+      ]
+    },
+    "weather": {
+      "command": "C:\\Users\\priya\\Downloads\\Supply-Chain-Management\\menv\\Scripts\\python.exe",
+      "args": [
+        "C:\\Users\\priya\\Downloads\\Supply-Chain-Management\\mcp_supply_chain\\servers\\weather_server.py",
+        "--stdio"
+      ]
+    },
+    "toll_rag": {
+      "command": "C:\\Users\\priya\\Downloads\\Supply-Chain-Management\\menv\\Scripts\\python.exe",
+      "args": [
+        "C:\\Users\\priya\\Downloads\\Supply-Chain-Management\\mcp_supply_chain\\servers\\toll_rag_server.py",
+        "--stdio"
+      ]
+    },
+    "osrm": {
+      "command": "C:\\Users\\priya\\Downloads\\Supply-Chain-Management\\menv\\Scripts\\python.exe",
+      "args": [
+        "C:\\Users\\priya\\Downloads\\Supply-Chain-Management\\mcp_supply_chain\\servers\\osrm_server.py",
+        "--stdio"
+      ]
+    }
+  }
+}
