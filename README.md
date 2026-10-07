@@ -10,6 +10,4 @@ npx @modelcontextprotocol/inspector
  npx @modelcontextprotocol/inspector menv\Scripts\python.exe mcp_supply_chain/servers/news_server.py   
 
 
- hello guis
-
- hehe
+ > git rm -r  --cached mcp_supply_chain1  
